@@ -1,0 +1,39 @@
+{
+  "name": "elm-example",
+  "description": "A simple example app with elm and webpack.",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "author": "Jeremy Zahner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jshmrtn/elm-example.git"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/elm package install",
+    "start": "webpack-dev-server --hot --inline",
+    "prebuild": "rimraf dist",
+    "build": "webpack",
+    "reinstall": "./node_modules/.bin/rimraf elm-stuff && ./node_modules/.bin/rimraf node_modules && yarn install"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.27.3",
+    "elm": "^0.18.0",
+    "elm-analyse": "^0.13.3",
+    "elm-format": "^0.6.1-alpha",
+    "elm-webpack-loader": "^4.3.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.1",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.1",
+    "postcss-loader": "^1.3.3",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.0",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.3.1",
+    "webpack-dev-server": "^2.4.2",
+    "webpack-merge": "^4.1.0"
+  }
+}
